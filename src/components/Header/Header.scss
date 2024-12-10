@@ -1,0 +1,116 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Header Styles */
+  .header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  .logo h1 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  .navigation {
+    display: flex;
+    list-style: none;
+  }
+  
+  .navigation ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navigation li {
+    margin-right: 20px;
+  }
+  
+  .navigation a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  .navigation a:hover {
+    color: #ff6347; /* Add hover effect to the links */
+  }
+  
+  /* Burger Menu */
+  .burger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+  }
+  
+  .burger-line {
+    height: 3px;
+    background-color: white;
+    width: 100%;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  /* Active class for burger menu */
+  .burger.active .burger-line:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  
+  .burger.active .burger-line:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .burger.active .burger-line:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+  
+  /* Mobile Styles */
+  @media (max-width: 768px) {
+    .navigation {
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+      flex-direction: column;
+      align-items: center;
+      display: none;
+    }
+  
+    .navigation.active {
+      display: flex;
+    }
+  
+    .navigation li {
+      margin: 15px 0;
+    }
+  
+    .burger {
+      display: flex;
+    }
+  
+    .container {
+      justify-content: space-between;
+    }
+  }
+  
